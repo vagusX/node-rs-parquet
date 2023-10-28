@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "name": "debug js",
+      "type": "node",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "cwd": "${workspaceFolder}",
+      "program": "${file}",
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["rust"],
+      "name": "debug rust",
+      "program": "node",
+      "preLaunchTask": "npm: build:debug",
+      "args": [
+        "--inspect",
+        "${file}"
+      ],
+    }
+  ]
+}

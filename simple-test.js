@@ -1,5 +1,3 @@
-const { plus100 } = require('./index')
+const { readParquet } = require('./index')
 
-console.assert(plus100(0) === 100, 'Simple test failed')
-
-console.info('Simple test passed')
+readParquet()
